@@ -1,6 +1,4 @@
 # Wikiless
-This is a mirror repo of https://codeberg.org/orenom/Wikiless
-
 A free open source alternative Wikipedia front-end focused on privacy.
 
 * No JavaScript or ads.
@@ -62,10 +60,6 @@ A free open source alternative Wikipedia front-end focused on privacy.
   - [http://wiki.phreedom.club](https://wiki.phreedom.club)
   - [http://wiki.phast.ru](https://wiki.phast.ru)
   - [https://wikiless.fascinated.cc](https://wikiless.fascinated.cc)
-
-## TODO
-
-* Make the mobile version better
 
 ## Why I should use Wikiless instead of Wikipedia?
 
@@ -146,50 +140,29 @@ If you are like me, and you also like the NSA, feel free to contribute and add m
 [25]: https://theintercept.com/document/2014/03/20/hunt-sys-admins/  
 [26]: https://www.theguardian.com/world/2013/dec/17/merkel-compares-nsa-stasi-obama  
 
+## Security Audits:
 
-## Installation
+- [Internet.ml](https://internet.nl/site/wikiless.whateveritworks.org/2060148/)
+- [HSTS Preload](https://hstspreload.org/)
+- [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=wikiless.whateveritworks.org)
+- [Security Headers](https://securityheaders.com/?q=wikiless.whateveritworks.org&hide=on&followRedirects=on)
+- [pagespeed](https://pagespeed.web.dev/)
+- [webbkoll](https://webbkoll.dataskydd.net/en)
+- [ImmuniWeb](https://www.immuniweb.com/sslwikiless.whateveritworks.org)
 
-### Manual
+## Usage:
 
-1. Install [Node.js](https://nodejs.org).
+1. Buy [Hetzner.com](https://hetzner.com) it's 100% renewal hardware and you get affordable dedicated servers, and you also help save the world.
 
-1. Install [redis-server](https://redis.io).
+2. Get [Cloudflare.com](https://cloudflare.com) it's 100% carbon renewal and you get to also save the world.
 
-   ```console
-   # Linux, for example with Debian based systems
-   apt install redis-server
+3. ```apt install git```
 
-   # macOS
-   brew install redis
-   ```
+4. ```git clone https://github.com/WhateverItWorks/my-wikiless-docker-compose.git wikiless```
 
-1. Clone and set up the repository.
+5. ```nano docker-compose.yml```
 
-   ```console
-   git clone https://github.com/Metastem/wikiless.git
-   cd wikiless
-   npm install --no-optional
-   cp config.js.template config.js # edit the file to suit your environment
-   redis-server
-   npm start
-   ```
+6. ```docker-compose up -d --build```
 
-Wikiless should now be running at <http://localhost:8080>.
 
-### Docker & docker compose
-
-Run wikiless in production with docker compose:
-
-```
-$ docker compose up
-```
-
-For development, there's a `docker-compose.dev.yml` that mounts the app code (for hot reload of code changes) and default config. Before running it, you need to install the dependencies:
-
-```
-$ cp docker-compose.dev.yml docker-compose.override.yml
-$ docker compose run --rm web npm install --no-optionals
-$ docker compose up
-```
-
-If you are experiencing errors with Redis not connecting, you might want to try the [alternative docker-compose.yml](https://github.com/JarbasAl/wikiless-docker).
+```http://localhost:8180```
