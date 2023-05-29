@@ -1,10 +1,8 @@
-FROM node:16-alpine AS build
+FROM node:16-alpine
+RUN apk add git
+RUN git clone https://github.com/Metastem/wikiless.git /wikiless
 WORKDIR /wikiless
-COPY . /wikiless
+RUN apk add redis
 RUN npm install --no-optional
-
-FROM gcr.io/distroless/nodejs:16
-COPY --from=build /wikiless /wikiless
-WORKDIR /wikiless
-COPY config.js.template config.js
-CMD ["src/wikiless.js"]
+COPY wikiless.config config.js
+CMD npm start
