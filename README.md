@@ -13,8 +13,9 @@ A free open source alternative Wikipedia front-end focused on privacy.
 - [https://wikiless.tiekoetter.com](https://wikiless.tiekoetter.com) - Suggest!
 
 - [https://wikiless.funami.tech](https://wikiless.funami.tech) - Suggest!
-# working, but light mode isn't default:
 
+# working, but light mode isn't default:
+ - https://wikiless.whateveritworks.org
  - https://wiki.froth.zone/
  - https://wikiless.esmailelbob.xyz/
  - https://wikiless.northboot.xyz/
@@ -40,6 +41,7 @@ A free open source alternative Wikipedia front-end focused on privacy.
  - https://wiki.phast.ru/ (bad certificate)
 
 # Community instances:
+  - [https://wikiless.whateveritworks.org](https://wikiless.whateveritworks.org)
   - [https://wikiless.sethforprivacy.com](https://wikiless.sethforprivacy.com) + [hidden server](http://dj2tbh2nqfxyfmvq33cjmhuw7nb6am7thzd3zsjvizeqf374fixbrxyd.onion)
   - [https://wiki.604kph.xyz](https://wiki.604kph.xyz)
   - [https://wikiless.lunar.icu](https://wikiless.lunar.icu)
