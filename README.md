@@ -10,7 +10,6 @@ A free open source alternative Wikipedia front-end focused on privacy.
 
 | Domain | CDN/DDoS Protection | Provider | Country |
 | -- | -- | -- | -- 
-| [https://wikiless.org](https://wikiless.org) | No CDN/DDoS Protection | Hetzner | Finland (Official)
 | [https://wikiless.tiekoetter.com](https://wikiless.tiekoetter.com) | No CDN/DDoS Protection | myVirtualserver | Germany
 | [https://wikiless.funami.tech](https://wikiless.funami.tech) | No CDN/DDoS Protection | Oracle Corporation | Korea
 | [https://wl.vern.cc/](https://wl.vern.cc/) [Tor Hidden Service](http://wl.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion) + [I2P](http://vernesciy2defjsputrjrv6pa5ll6qzrckfffi5lgkumstdojyga.b32.i2p)| No CDN/DDoS Protection | Hetzner | United States of America
