@@ -36,7 +36,7 @@ A free open source alternative Wikipedia front-end focused on privacy.
 | -- |
 | [wl.vern.cc: I2P](http://vernesciy2defjsputrjrv6pa5ll6qzrckfffi5lgkumstdojyga.b32.i2p) |
 | [wikiless.northboot.xyz: I2P](http://wikiless.i2p)
-| [I2P](http://hflqp2ejxygpj6cdwo3ogfieqmxw3b56w7dblt7bor2ltwk6kcfa.b32.i2p)
+| [Unknown: I2P](http://hflqp2ejxygpj6cdwo3ogfieqmxw3b56w7dblt7bor2ltwk6kcfa.b32.i2p)
 
 ## Why I should use Wikiless instead of Wikipedia?
 
