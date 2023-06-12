@@ -8,21 +8,35 @@ A free open source alternative Wikipedia front-end focused on privacy.
 
 ### Instances
 
-| Domain | CDN/DDoS Protection | Provider | Country |
+| Clearnet/Domain | CDN/DDoS Protection | Provider | Country |
 | -- | -- | -- | -- 
 | [https://wikiless.tiekoetter.com](https://wikiless.tiekoetter.com) | No CDN/DDoS Protection | myVirtualserver | Germany
 | [https://wikiless.funami.tech](https://wikiless.funami.tech) | No CDN/DDoS Protection | Oracle Corporation | Korea
-| [https://wl.vern.cc/](https://wl.vern.cc/) [Tor Hidden Service](http://wl.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion) + [I2P](http://vernesciy2defjsputrjrv6pa5ll6qzrckfffi5lgkumstdojyga.b32.i2p)| No CDN/DDoS Protection | Hetzner | United States of America
+| [https://wl.vern.cc/](https://wl.vern.cc/) | No CDN/DDoS Protection | Hetzner | United States of America
 | [https://wikiless.whateveritworks.org](https://wikiless.whateveritworks.org) | Cloudflare | Hetzner | Germany
 | [https://wiki.froth.zone/](https://wiki.froth.zone/) | No CDN/DDoS Protection | Oracle Corporation | United States of America
-| [https://wikiless.northboot.xyz/](https://wikiless.northboot.xyz/) [Tor Hidden Service](http://ybgg2evrcdz37y2qes23ff3wjqjdn33tthgoagi76vhxytu4mpxiz5qd.onion) + [I2P](http://wikiless.i2p) | No CDN/DDoS Protection | netcup GmbH | Germany
-| [https://wikiless.rawbit.ninja/](https://wikiless.rawbit.ninja/) [Tor Hidden Service](http://tdx37ew3oke5rxn3yi5r5665ka7ozvehnd4xmnjxxdvqorias2nyl4qd.onion) | Cloudflare | 
-| [https://wiki.adminforge.de/](https://wiki.adminforge.de/) (Germany UI) | No CDN/DDoS Protection | Hetzner | Germany
+| [https://wikiless.northboot.xyz/](https://wikiless.northboot.xyz/) | No CDN/DDoS Protection | netcup GmbH | Germany
+| [https://wikiless.rawbit.ninja/](https://wikiless.rawbit.ninja/)  | Cloudflare | 
+| [https://wiki.adminforge.de/](https://wiki.adminforge.de/) | No CDN/DDoS Protection | Hetzner | Germany
 | [https://wikiless.pufe.org/](https://wikiless.pufe.org/) | No CDN/DDoS Protection | The Internet Group | New Zealand
 | [https://wikiless.fascinated.cc/](https://wikiless.fascinated.cc/) | Cloudflare
 | [https://wiki.froth.zone](https://wiki.froth.zone) | No CDN/DDoS Protection | Oracle Corporation | United States of America
-| [Tor Hidden Service](http://c2pesewpalbi6lbfc5hf53q4g3ovnxe4s7tfa6k2aqkf7jd7a7dlz5ad.onion) + [I2P](http://hflqp2ejxygpj6cdwo3ogfieqmxw3b56w7dblt7bor2ltwk6kcfa.b32.i2p)
 | [https://wikiless.bloatcat.tk](https://wikiless.bloatcat.tk) | No CDN/DDoS Protection | 1984.hosting | Iceland
+| [https://wikiless.nerdyfam.tech](https://wikiless.nerdyfam.tech) | Cloudflare |
+| [https://wiki.phreedom.club/](https://wiki.phreedom.club/) | No CDN/DDoS Protection | Flokinet | United Kingdom
+
+| TOR |
+| -- |  
+| [wl.vern.cc: Tor Hidden Service](http://wl.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion) |
+| [wikiless.northboot.xyz: Tor Hidden Service](http://ybgg2evrcdz37y2qes23ff3wjqjdn33tthgoagi76vhxytu4mpxiz5qd.onion)
+| [wikiless.rawbit.ninja: Tor Hidden Service](http://tdx37ew3oke5rxn3yi5r5665ka7ozvehnd4xmnjxxdvqorias2nyl4qd.onion)
+| [Unknown: Tor Hidden Service](http://c2pesewpalbi6lbfc5hf53q4g3ovnxe4s7tfa6k2aqkf7jd7a7dlz5ad.onion)
+
+| I2P |
+| -- |
+| [wl.vern.cc: I2P](http://vernesciy2defjsputrjrv6pa5ll6qzrckfffi5lgkumstdojyga.b32.i2p) |
+| [wikiless.northboot.xyz: I2P](http://wikiless.i2p)
+| [I2P](http://hflqp2ejxygpj6cdwo3ogfieqmxw3b56w7dblt7bor2ltwk6kcfa.b32.i2p)
 
 ## Why I should use Wikiless instead of Wikipedia?
 
@@ -103,29 +117,14 @@ If you are like me, and you also like the NSA, feel free to contribute and add m
 [25]: https://theintercept.com/document/2014/03/20/hunt-sys-admins/  
 [26]: https://www.theguardian.com/world/2013/dec/17/merkel-compares-nsa-stasi-obama  
 
-## Security Audits:
 
-- [Internet.ml](https://internet.nl/site/wikiless.whateveritworks.org/2060148/)
-- [HSTS Preload](https://hstspreload.org/)
-- [SSL Labs](https://www.ssllabs.com/ssltest/analyze.html?d=wikiless.whateveritworks.org)
-- [Security Headers](https://securityheaders.com/?q=wikiless.whateveritworks.org&hide=on&followRedirects=on)
-- [pagespeed](https://pagespeed.web.dev/)
-- [webbkoll](https://webbkoll.dataskydd.net/en)
-- [ImmuniWeb](https://www.immuniweb.com/sslwikiless.whateveritworks.org)
+## Simple & Easy Installation
 
-## Usage:
+### Docker & docker compose
 
-1. Buy [Hetzner.com](https://hetzner.com) it's 100% renewal hardware and you get affordable dedicated servers, and you also help save the world.
+Run wikiless in production with docker compose:
 
-2. Get [Cloudflare.com](https://cloudflare.com) it's 100% carbon renewal and you get to also save the world.
-
-3. ```apt install git```
-
-4. ```git clone https://github.com/WhateverItWorks/my-wikiless-docker-compose.git wikiless```
-
-5. ```nano docker-compose.yml```
-
-6. ```docker-compose up -d --build```
-
-
-```http://localhost:8180```
+```
+docker-compose up -d --build
+```
+Wikiless should now be running at <http://localhost:8080>.
