@@ -8,4 +8,4 @@
 
 ## Reporting a Vulnerability
 
-If find any bugs or Vulnerability, Please contact [Metastem](https://github.com/Metastem)
+If find any bugs or Vulnerability, Please make a pull request
