@@ -1,4 +1,4 @@
-FROM node:16-alpine
+FROM node:20-alpine3.17
 RUN apk add git
 RUN git clone https://github.com/Metastem/wikiless.git /wikiless
 WORKDIR /wikiless
