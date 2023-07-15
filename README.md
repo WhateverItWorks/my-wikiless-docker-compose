@@ -7,87 +7,110 @@ A free open source alternative Wikipedia front-end focused on privacy.
 * Self-hostable. Anyone can setup a private or public instance.
 
 ### Instances
-
 | Clearnet/Domain | CDN/DDoS Protection | Provider | Country |
 | -- | -- | -- | -- 
+| [https://wikiless.whateveritworks.org](https://wikiless.whateveritworks.org) (Official) | Cloudflare | Hetzner | Germany 
 | [https://wikiless.tiekoetter.com](https://wikiless.tiekoetter.com) | No CDN/DDoS Protection | myVirtualserver | Germany
 | [https://wikiless.funami.tech](https://wikiless.funami.tech) | No CDN/DDoS Protection | Oracle Corporation | Korea
 | [https://wl.vern.cc/](https://wl.vern.cc/) | No CDN/DDoS Protection | Hetzner | United States of America
-| [https://wikiless.whateveritworks.org](https://wikiless.whateveritworks.org) | Cloudflare | Hetzner | Germany
 | [https://wiki.froth.zone/](https://wiki.froth.zone/) | No CDN/DDoS Protection | Oracle Corporation | United States of America
 | [https://wikiless.northboot.xyz/](https://wikiless.northboot.xyz/) | No CDN/DDoS Protection | netcup GmbH | Germany
 | [https://wikiless.rawbit.ninja/](https://wikiless.rawbit.ninja/)  | Cloudflare | 
 | [https://wiki.adminforge.de/](https://wiki.adminforge.de/) | No CDN/DDoS Protection | Hetzner | Germany
-| [https://wikiless.pufe.org/](https://wikiless.pufe.org/) | No CDN/DDoS Protection | The Internet Group | New Zealand
-| [https://wikiless.fascinated.cc/](https://wikiless.fascinated.cc/) | Cloudflare
 | [https://wiki.froth.zone](https://wiki.froth.zone) | No CDN/DDoS Protection | Oracle Corporation | United States of America
 | [https://wiki.phreedom.club/](https://wiki.phreedom.club/) | No CDN/DDoS Protection | Flokinet | United Kingdom
+| [https://wiki.owo.si](https://wiki.owo.si/) | No CDN/DDoS Protection | Contabo | Germany
 
 | TOR |
 | -- |  
 | [wl.vern.cc: Tor Hidden Service](http://wl.vernccvbvyi5qhfzyqengccj7lkove6bjot2xhh5kajhwvidqafczrad.onion) |
 | [wikiless.northboot.xyz: Tor Hidden Service](http://ybgg2evrcdz37y2qes23ff3wjqjdn33tthgoagi76vhxytu4mpxiz5qd.onion)
 | [wikiless.rawbit.ninja: Tor Hidden Service](http://tdx37ew3oke5rxn3yi5r5665ka7ozvehnd4xmnjxxdvqorias2nyl4qd.onion)
-| [Unknown: Tor Hidden Service](http://c2pesewpalbi6lbfc5hf53q4g3ovnxe4s7tfa6k2aqkf7jd7a7dlz5ad.onion)
+| [Unknown: Tor Hidden Service](http://c2pesewpalbi6lbfc5hf53q4g3ovnxe4s7tfa6k2aqkf7jd7a7dlz5ad.onion) + [I2P](http://hflqp2ejxygpj6cdwo3ogfieqmxw3b56w7dblt7bor2ltwk6kcfa.b32.i2p)
 
 | I2P |
 | -- |
 | [wl.vern.cc: I2P](http://vernesciy2defjsputrjrv6pa5ll6qzrckfffi5lgkumstdojyga.b32.i2p) |
 | [wikiless.northboot.xyz: I2P](http://wikiless.i2p)
-| [Unknown: I2P](http://hflqp2ejxygpj6cdwo3ogfieqmxw3b56w7dblt7bor2ltwk6kcfa.b32.i2p)
 
-## Why I should use Wikiless instead of Wikipedia?
+| LOKINET |
+| -- |
+
+### Deploy with Docker (Simple & Easy, Recommended)
+
+Run wikiless in production with docker-compose:
+```
+git clone https://github.com/Metastem/wikiless.git wiki
+cd wiki
+nano wikiless.config (change to your own settings)
+nano docker-compose.yml (change your port)
+docker-compose pull
+docker-compose up -d
+```
+Wikiless should now be running at <http://localhost:8180>.
+
+
+Run wikiless in developer with docker-compose:
+```
+git clone https://github.com/Metastem/wikiless.git wiki
+cd wiki
+nano wikiless.config (change to your own settings)
+nano docker-compose.yml (change your port and remove the image: and uncomment the build)
+docker-compose up -d --build
+```
+Wikiless should now be running at <http://localhost:8180>.
+
+### Why I should use Wikiless instead of Wikipedia?
 
 There are couple of reasons why you might want to use Wikiless:
 
-* Circumvent censorship (1)
-* You prevent Wikipedia getting your IP address (2)
+> * Circumvent censorship (1)
+> * You prevent Wikipedia getting your IP address (2)
+
 
 ### 1: Circumvent censorship
 
-Many countries have censored Wikipedia pages, including China, France, Germany, Iran, Russia... https://wikiless.org/wiki/Censorship_of_Wikipedia?lang=en
-
+> Many countries have censored Wikipedia pages, including China, France, Germany, Iran, Russia... https://wikiless.org/wiki/Censorship_of_Wikipedia?lang=en
 
 ### 2: What's the problem of Wikipedia getting my IP address?
 
-**Short:** If you trust that Wikipedia has not been infiltrated and/or you don't trust the Wikiless instance you would use, then you probably want to keep using Wikipedia instead of Wikiless because there are nothing to worry about giving your IP address to Wikipedia.
+> **Short:** If you trust that Wikipedia has not been infiltrated and/or you don't trust the Wikiless instance you would use, then you probably want to keep using Wikipedia instead of Wikiless because there are nothing to worry about giving your IP address to Wikipedia.
 
-**Long:** We know from the leaks by Edward Snowden that the U.S. National Security Agency (NSA) has identified Wikipedia as a target for surveillance already in 2009.\[1\]\[2\] Wikimedia filled a lawsuit against the NSA in 2015 in order to fight against the mass-surveillance done by the NSA.\[2\]\[3\]
+> **Long:** We know from the leaks by Edward Snowden that the U.S. National Security Agency (NSA) has identified Wikipedia as a target for surveillance already in 2009.\[1\]\[2\] Wikimedia filled a lawsuit against the NSA in 2015 in order to fight against the mass-surveillance done by the NSA.\[2\]\[3\]
 
 Some points from the lawsuit legal documents:
 
-* Wikimedia hired a full-time Traffic Security Engineer who is responsible for implementing and maintaining technical efforts to protect its users' reading and editing habits from mass surveillance-including, specifically, from the NSA's surveillance.[4]
-* Wikimedia transitioned to HTTPS-by-default primarily due to NSA's surveillance.[5]
+> * Wikimedia hired a full-time Traffic Security Engineer who is responsible for implementing and maintaining technical efforts to protect its users' reading and editing habits from mass surveillance-including, specifically, from the NSA's surveillance.[4]
+> * Wikimedia transitioned to HTTPS-by-default primarily due to NSA's surveillance.[5]
 
-One of the documents revealed by Snowden shows that both Wikipedia and Wikimedia has been listed as a so-called "Appid" in the XKeyscore – a program that covers "nearly everything a typical user does on the internet" – to identify web traffic, meaning that wiki related web traffic is something that NSA finds valuable.[6]
+> One of the documents revealed by Snowden shows that both Wikipedia and Wikimedia has been listed as a so-called "Appid" in the XKeyscore – a program that covers "nearly everything a typical user does on the internet" – to identify web traffic, meaning that wiki related web traffic is something that NSA finds valuable.[6]
 
-Jimmy Wales, Founder of Wikipedia, and Lila Tretikov, former Executive Director of the Wikimedia Foundation, has stated that, “[t]hese activities [viewing and editing Wikipedia articles] are sensitive and private: They can reveal everything from a person’s political and religious beliefs to sexual orientation and medical conditions.”[7]
+> Jimmy Wales, Founder of Wikipedia, and Lila Tretikov, former Executive Director of the Wikimedia Foundation, has stated that, “[t]hese activities [viewing and editing Wikipedia articles] are sensitive and private: They can reveal everything from a person’s political and religious beliefs to sexual orientation and medical conditions.”[7]
 
-Is it a far fetched idea that given the importance of the data what NSA (or other malicious actors) might gain from Wikipedia, that they haven't been able to infiltrate Wikipedia's servers in some way or another in the last 12 years? I don't think so. That's why I created Wikiless.
+> Is it a far fetched idea that given the importance of the data what NSA (or other malicious actors) might gain from Wikipedia, that they haven't been able to infiltrate Wikipedia's servers in some way or another in the last 12 years? I don't think so. That's why I created Wikiless.
 
 
 Non-Wikipedia related fun facts about the NSA:
-* NSA pushed for the adoption of the Dual EC DRBG encryption standard which contained a backdoor deliberately inserted by themselves. The backdoor would have allowed NSA to decrypt for example SSL/TLS encryption which used Dual_EC_DRBG as a CSPRNG.[8][9]
-* NSA spends $250 million per year to insert backdoors in software and hardware.[10][11]
-* NSA classifies Linux Journal readers, Tor and Tails users as "extremists".[12]
-* NSA intercepts routers, servers and other network hardware being shipped to organizations targeted for surveillance and install covert implant firmware onto them before they are delivered.[13]
-* NSA has spied extensively on the European Union, the United Nations and numerous governments including allies and trading partners in Europe, South America and Asia.[14][15]
-* “For the past decade, N.S.A. has led an aggressive, multipronged effort to break widely used Internet encryption technologies,” said a 2010 memo describing a briefing about N.S.A. accomplishments for employees of its British counterpart, Government Communications Headquarters, or GCHQ. “Cryptanalytic capabilities are now coming online. Vast amounts of encrypted Internet data which have up till now been discarded are now exploitable.”[16]
-* At Microsoft, the NSA worked with company officials to get pre-encryption access to Microsoft’s most popular services, including Outlook e-mail, Skype Internet phone calls and chats, and SkyDrive, the company’s cloud storage service.[16]
-* NSA has contacted Linus Torvalds with a request to add backdoors into Linux.[17]
-* Under the PRISM program, which started in 2007, NSA gathers Internet communications from foreign targets from nine major U.S. Internet-based communication service providers: Microsoft, Yahoo, Google, Facebook, PalTalk, AOL, Skype, YouTube and Apple. Data gathered include email, videos, photos, VoIP chats such as Skype, and file transfers.[18]
-* NSA is cooperating with 'third party' countries which tap into fiber optic cables carrying the majority of the world's electronic communications and are secretly allowing the NSA to install surveillance equipment on these fiber-optic cables. The foreign partners of the NSA turn massive amounts of data like the content of phone calls, faxes, e-mails, internet chats, data from virtual private networks, and calls made using Voice over IP software like Skype over to the NSA. In return these partners receive access to the NSA's sophisticated surveillance equipment so that they too can spy on the mass of data that flows in and out of their territory. Among the partners participating in the NSA mass surveillance program are Austria, Belgium, Denmark, Finland, Sweden and Spain.[19][20]
-* GCHQ, with aid from the NSA, intercepted and stored the webcam images of millions of internet users not suspected of wrongdoing. The surveillance program codenamed Optic Nerve collected still images of Yahoo webcam chats (one image every five minutes) in bulk and saved them to agency databases.[21]
-* The NSA has built an infrastructure which enables it to covertly hack into computers on a mass scale by using automated systems that reduce the level of human oversight in the process. The NSA relies on an automated system codenamed TURBINE which in essence enables the automated management and control of a large network of implants (a form of remotely transmitted malware on selected individual computer devices or in bulk on tens of thousands of devices). As quoted by The Intercept, TURBINE is designed to "allow the current implant network to scale to large size (millions of implants) by creating a system that does automated control implants by groups instead of individually."[22][23]
-* NSA "hunts" system administrators. The Intercept published a document of an NSA employee discussing how to build a database of IP addresses, webmail, and Facebook accounts associated with system administrators so that the NSA can gain access to the networks and systems they administer.[24][25]
-* Angela Merkel has compared NSA to Stasi.[26]
+> * NSA pushed for the adoption of the Dual EC DRBG encryption standard which contained a backdoor deliberately inserted by themselves. The backdoor would have allowed NSA to decrypt for example SSL/TLS encryption which used Dual_EC_DRBG as a CSPRNG.[8][9]
+> * NSA spends $250 million per year to insert backdoors in software and hardware.[10][11]
+> * NSA classifies Linux Journal readers, Tor and Tails users as "extremists".[12]
+> * NSA intercepts routers, servers and other network hardware being shipped to organizations targeted for surveillance and install covert implant firmware onto them before they are delivered.[13]
+> * NSA has spied extensively on the European Union, the United Nations and numerous governments including allies and trading partners in Europe, South America and Asia.[14][15]
+> * “For the past decade, N.S.A. has led an aggressive, multipronged effort to break widely used Internet encryption technologies,” said a 2010 memo describing a briefing about N.S.A. accomplishments for employees of its British counterpart, Government Communications Headquarters, or GCHQ. “Cryptanalytic capabilities are now coming online. Vast amounts of encrypted Internet data which have up till now been discarded are now exploitable.”[16]
+> * At Microsoft, the NSA worked with company officials to get pre-encryption access to Microsoft’s most popular services, including Outlook e-mail, Skype Internet phone calls and chats, and SkyDrive, the company’s cloud storage service.[16]
+> * NSA has contacted Linus Torvalds with a request to add backdoors into Linux.[17]
+> * Under the PRISM program, which started in 2007, NSA gathers Internet communications from foreign targets from nine major U.S. Internet-based communication service providers: Microsoft, Yahoo, Google, Facebook, PalTalk, AOL, Skype, YouTube and Apple. Data gathered include email, videos, photos, VoIP chats such as Skype, and file transfers.[18]
+> * NSA is cooperating with 'third party' countries which tap into fiber optic cables carrying the majority of the world's electronic communications and are secretly allowing the NSA to install surveillance equipment on these fiber-optic cables. The foreign partners of the NSA turn massive amounts of data like the content of phone calls, faxes, e-mails, internet chats, data from virtual private networks, and calls made using Voice over IP software like Skype over to the NSA. In return these partners receive access to the NSA's sophisticated surveillance equipment so that they too can spy on the mass of data that flows in and out of their territory. Among the partners participating in the NSA mass surveillance program are Austria, Belgium, Denmark, Finland, Sweden and Spain.[19][20]
+> * GCHQ, with aid from the NSA, intercepted and stored the webcam images of millions of internet users not suspected of wrongdoing. The surveillance program codenamed Optic Nerve collected still images of Yahoo webcam chats (one image every five minutes) in bulk and saved them to agency databases.[21]
+> * The NSA has built an infrastructure which enables it to covertly hack into computers on a mass scale by using automated systems that reduce the level of human oversight in the process. The NSA relies on an automated system codenamed TURBINE which in essence enables the automated management and control of a large network of implants (a form of remotely transmitted malware on selected individual computer devices or in bulk on tens of thousands of devices). As quoted by The Intercept, TURBINE is designed to "allow the current implant network to scale to large size (millions of implants) by creating a system that does automated control implants by groups instead of individually."[22][23]
+> * NSA "hunts" system administrators. The Intercept published a document of an NSA employee discussing how to build a database of IP addresses, webmail, and Facebook accounts associated with system administrators so that the NSA can gain access to the networks and systems they administer.[24][25]
+> * Angela Merkel has compared NSA to Stasi.[26]
 
 If you are like me, and you also like the NSA, feel free to contribute and add more fun facts!
 
-
-
 #### Sources
-  
+
+```
 \[1\]: https://www.aclu.org/files/natsec/nsa/20140722/Why%20Are%20We%20Interested%20in%20HTTP.pdf  
 \[2\]: https://www.nytimes.com/2015/03/10/opinion/stop-spying-on-wikipedia-users.html  
 \[3\]: https://policy.wikimedia.org/stopsurveillance/  
@@ -114,19 +137,4 @@ If you are like me, and you also like the NSA, feel free to contribute and add m
 [24]: https://web.archive.org/web/20140411054544/https://firstlook.org/theintercept/article/2014/03/20/inside-nsa-secret-efforts-hunt-hack-system-administrators/  
 [25]: https://theintercept.com/document/2014/03/20/hunt-sys-admins/  
 [26]: https://www.theguardian.com/world/2013/dec/17/merkel-compares-nsa-stasi-obama  
-
-### Deploy with Docker
-
-Run wikiless in production with docker-compose:
 ```
-docker-compose down
-docker-compose pull
-docker-compose up -d
-```
-
-Run wikiless in developer with docker-compose:
-```
-docker-compose down
-docker-compose up -d --build
-```
-Wikiless should now be running at <http://localhost:8080>.
